@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-portafolio',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portafolio.component.sass']
 })
 export class PortafolioComponent implements OnInit {
-
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.Data();
   }
 
 }
