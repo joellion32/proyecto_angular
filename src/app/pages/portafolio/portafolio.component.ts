@@ -8,9 +8,10 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class PortafolioComponent implements OnInit {
   constructor(public dataService: DataService) { }
-
+ 
   ngOnInit() {
     this.dataService.Data();
+    this.dataService.Producto();
   }
 
 }
